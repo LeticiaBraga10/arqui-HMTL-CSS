@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Losango animado com entrada</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+
+  body, html {
+    margin: 0; padding: 0; height: 100%; overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    background: #5e84c5;
+  }
+
+  /* Losango inicial */
+  .intro {
+    background: rgb(108, 29, 0);
+    width: 150px;
+    height: 150px;
+    clip-path: polygon(
+      50% 0%,
+      100% 50%,
+      50% 100%,
+      0% 50%
+    );
+    position: fixed;
+    top: 50%;
+    left: -180px; /* Começa fora da tela à esquerda */
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Honk";
+    font-size: 1.5em;
+    color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.7);
+    transition:
+      left 2s ease,
+      width 1s ease,
+      height 1s ease,
+      clip-path 1s ease,
+      opacity 1s ease;
+    z-index: 9999;
+    user-select: none;
+  }
+
+  /* Losango já no centro e mostrando texto */
+  .intro.centro {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Texto aparece quando no centro */
+  .intro span {
+    opacity: 0;
+    transition: opacity 0.5s ease 2s; /* aparece após movimento */
+    pointer-events: none;
+  }
+
+  .intro.centro span {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Losango expandido (aberto) */
+  .intro.expandido {
+    width: 2000px;
+    height: 2000px;
+    clip-path: inset(0);
+    opacity: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Conteúdo escondido inicialmente */
+  .conteudo {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease;
+    padding: 20px;
+    max-width: 900px;
+    margin: 30px auto;
+    color: white;
+  }
+
+  /* Conteúdo aparece após animação do losango */
+  .conteudo.visivel {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Outros estilos do conteúdo */
+  h1 {
+    font: 4em "Honk";
+    text-align: center;
+    background-color: #FFC13D;
+    box-shadow: 9px 9px 9px black;
+    width: 100%;
+    max-width: 830px;
+    margin: 20px auto;
+    padding: 0;
+    color: black;
+  }
+
+  div.caixa {
+    background-color: aqua;
+    font-size: 20px;
+    box-shadow: 3px 4px 7px black;
+    padding: 25px;
+    margin: 56px auto;
+    width: 450px;
+    height: 90px;
+    border-radius: 70px;
+    text-align: center;
+    border: 4px solid rgba(55, 15, 92, 0.671);
+    cursor: pointer;
+    overflow: hidden;
+    transition: height 0.7s ease;
+    position: relative;
+  }
+
+  div.caixa:hover {
+    background-color: rgb(61, 149, 226);
+    height: 300px;
+  }
+
+  div.conteudo-video {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    margin-top: 20px;
+  }
+
+  div.caixa:hover div.conteudo-video {
+    opacity: 1;
+  }
+
+  div.conteudo-video iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 32px;
+    display: block;
+  }
+
+  h2 {
+    font-family: 'Honk';
+    text-align: center;
+    font-size: 1.9em;
+    color: white;
+  }
+
+  ul {
+    font-style: italic;
+    color: white;
+    max-width: 900px;
+    margin: 0 auto 50px;
+    padding-left: 20px;
+  }
+
+  a {
+    color: #FFC13D;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<!-- Losango inicial -->
+<div class="intro" id="intro">
+  <span>Entrar</span>
+</div>
+
+<!-- Conteúdo da página escondido inicialmente -->
+<div class="conteudo" id="conteudo">
+  <h1>Teste de site</h1>
+
+  <div class="caixa">
+    Passe o mouse aqui
+    <div class="conteudo-video">
+      <iframe 
+        src="https://www.youtube.com/embed/B_tTLftgc0g?si=9mS2s9TbieozSRhQ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen> 
+      </iframe>
+    </div>
+  </div>
+
+  <h2>ACESSE AS NOSSAS REDES SOCIAIS</h2>
+  <ul>
+    <li><a href="https://youtube.com" target="_blank" rel="noopener noreferrer">Youtube</a></li>
+    <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+    <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+  </ul>
+</div>
+
+<script>
+  const intro = document.getElementById('intro');
+  const conteudo = document.getElementById('conteudo');
+  const textoEntrar = intro.querySelector('span');
+
+  // Passo 1: anima o losango vindo da esquerda para o centro
+  window.addEventListener('load', () => {
+    // anima a posição 'left' do losango para 50% (centro)
+    intro.classList.add('centro');
+  });
+
+  // Passo 2: ao clicar, expande e some, depois mostra conteúdo
+  intro.addEventListener('click', () => {
+    // remove o texto para não atrapalhar animação
+    textoEntrar.style.opacity = '0';
+
+    // Expande o losango e some
+    intro.classList.add('expandido');
+
+    // Depois de 1s (tempo da animação), esconde o losango e mostra conteúdo
+    setTimeout(() => {
+      intro.style.display = 'none';
+      conteudo.classList.add('visivel');
+    }, 1000);
+  });
+</script>
+
+</body>
+</html>

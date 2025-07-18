@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em html 5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir as imagens em vários dispositivos de tamanhos diferentes.</p>
+    <picture>
+        <source media="(max-width:700px )" srcset="imagens/foto-p.png" type="image/png"><!--Source midia type-->
+        <source media="(max-width:1050px )" srcset="imagens/foto-m.png" type="image/png"> <!--serve para carregar as imagens flexiveis. 
+        Obs: o source da imagem pequena tem que ser acima da imagem média-->
+        <img src="imagens/foto-g.png" alt="imagem flexivel">
+    </picture>
+    <h1>Reproduzindo audios em html 5</h1>
+    <p>Aprenda a reproduzir audios em html 5</p>
+    <!--<audio src="midia/IveGot.mp3" controls autoplay></audio>-->
+    <audio preload="metadata" controls loop>
+        <source src="midia/IveGot.mp3" type="audio/mpeg">
+        <source src="midia/IveGot.ogg" type="audio/ogg">
+        <source src="midia/IveGot.wav" type="audio/wav">
+        <!--Para aparecer o botão de play da música,use: controls.    Metadata, serve para que a musica só toque quando eu der play. loop é para tocar novamente.-->
+    </audio>
+        <p>Infelizmente o seu dispositivo não é compativél com esse arquivo. <a href="midia/IveGot.mp3">Clique aqui para fazer o download</a></p>
+</body>
+</html>

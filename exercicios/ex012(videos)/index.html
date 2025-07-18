@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Insrindo videos hospedados localmente.</h1>
+    <p>Este vídeo está hospedado localmente no meu próprio servidor</p>
+    <!--<video src="midias/Meu-Video.mkv" width="700" controls></video> simples-->
+    <video controls width="600" poster="menina.jpg"> 
+        <source src="midias/Meu-Video.mkv" type="video/mkv">
+        <source src="midias/Meu-Video.mp4" type="video/mp4">
+        <source src="midias/Meu-Video.webm" type="video/webm">
+        <!--Essas linhas de mkv,mp4,webm e ogg servem para, caso um navegador nao suporte um desses tipos, provavelmente ele abrirá outro tipo.-->
+        <p>Se nenhum for compativel</p>
+    </video>
+</body>
+</html>

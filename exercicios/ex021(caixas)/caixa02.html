@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body{
+            background-color: lightgray;
+            font-family: sans-serif;
+            margin: 0px;
+        }
+        header{
+            background-color: aliceblue;
+            padding: 10px;
+            margin: 10px;
+            
+
+        }
+        nav{
+           background-color: rgb(89, 92, 92); 
+           padding: 3px;
+           box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1), 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0,0,0,0.9);
+        }
+        nav > a{
+            text-decoration: none;
+            color: aliceblue;
+            font-weight: bold;
+            margin-right: 50px;
+        }
+        nav >a:hover{
+            text-decoration: underline;
+            color: rgb(255, 0, 0);
+            
+        }
+        main{
+            background-color: aliceblue;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 0px 35px;
+            text-shadow: 10px 10px 10px rgba(5, 5, 8, 0.519);
+        }
+        article{
+            background-color: rgb(177, 182, 186);
+            padding: 5px;
+        }
+        article > aside{
+            text-align: center;
+            background-color: rgb(62, 60, 60);
+            color: aliceblue;
+        }
+        footer{
+            background-color: black;
+            color: aliceblue;
+            text-align: center;
+            padding: 4px;
+            margin: 0px;
+            
+        }
+        footer > p{
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        </nav>
+</header>
+<main>
+    <section id="assuntos">
+        <p>Política Espostes Educação</p>
+    </section>
+    <section>
+        <article>
+            <h2>Notícias sobre o Brasil</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis libero accusamus perspiciatis laboriosam eligendi vel ipsa, adipisci veniam vitae alias in cupiditate repudiandae at blanditiis         expedita. Tempore pariatur quam facilis!</p>
+            <aside>
+               <p>Artigo escrito por Leca</p>
+            </aside>
+        </article>
+        <article>
+
+        </article>
+    </section>
+</main>
+<footer>
+    <p>Desenvolvido por Leticia</p>
+</footer>
+</body>
+</html>

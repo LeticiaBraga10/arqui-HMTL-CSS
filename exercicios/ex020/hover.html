@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        div > p {
+            display: none;
+            /*Serve para esconder o p.
+            Além disso, div>p significa que p está dentro da div.*/
+        }
+        div:hover > p{
+            display: block;
+            color: aliceblue;
+            background-color: red;
+            width: 300px;
+            /*serve para aparecer a frase que está escondida.*/
+        }
+        div:hover{
+            color: red; /*para mudar a cor da letra.*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de hover</h1>
+    <p>Exemplo de hover..</p>
+    <div>
+        Passe o mouse aqui.
+        <p>TEXTO ESCONDIDO..</p>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+        body{
+            background-color: rgb(255, 255, 255);
+            
+        }
+        .especial{
+            text-align:center;
+        }
+        h1{
+            color: rgb(36, 117, 189);
+            font-family: "Honk";
+        }
+        div{
+            text-align: center;
+            background-color: rgb(251, 251, 251);
+            border: 2px solid rgb(203, 206, 12);
+            height: 100px;
+            width: 600px;
+            border-radius: 100px;
+            display: box-block;
+            padding: 40px;
+            margin: 20px;
+            box-shadow: 5px 15px 15px rgb(87, 111, 184);
+        }
+        
+        body:active{
+            background-color: aliceblue;
+            background-image: linear-gradient(90deg,rgb(60, 0, 255),rgb(246, 46, 80));
+            div#d1{
+                background-image: linear-gradient(189deg,rgb(25, 4, 57),rgb(0, 0, 0),white);
+                color: white;
+                box-shadow: 5px 5px 5px pink;
+                border: 2px solid white;
+            }
+            div#d2{
+                background-image: linear-gradient(189deg,rgb(57, 4, 4),rgb(225, 5, 5),rgb(152, 80, 80));
+                color: white;
+                box-shadow: 5px 5px 5px pink;
+                border: 2px solid white;
+            }
+            div#d3{
+                background-image: linear-gradient(189deg,rgb(13, 57, 4),rgb(9, 225, 5),rgb(103, 152, 80));
+                color: white;
+                box-shadow: 5px 5px 5px pink;
+                border: 2px solid white;
+                
+        }
+    }
+        input{
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
+            width: 200px;
+            height: 30px;
+            box-shadow: 5px 3px 4px rgb(17, 0, 255);
+        }
+        a{
+            color: rgb(20, 3, 67);
+            font-size: large;
+            font-family: sans-serif;
+            background-color: rgb(0, 106, 255);
+            box-shadow: 20px;
+            border-radius: 10px;
+            border: 2px solid rgb(247, 216, 13);
+        }
+        div > p{
+            display: none;
+        }
+        div:hover > p {
+            display: block;
+            background-image: linear-gradient(to right, rgb(55, 52, 52), green);
+            color: aliceblue;
+            height: max-content
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 class="especial">TESTE DE TREINO </h1>
+    <section>
+    <div id="d1">✈ 01 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis cupiditate eligendi quia dignissimos? Enim, mollitia commodi? Provident quaerat nostrum dignissimos a? Minus iure in quae ab perferendis modi culpa! Nesciunt.</p>
+    </div>
+    <div id="d2">☂ 02 <input type="button" value="pesquisa"></div>
+    <div id="d3">☀ 03</div>
+    </section>
+    <ul>
+        <h1>Acesse as nossas redes sóciais através dos links</h1>
+        <li><a href="https://youtube.com" target="_blank"> youtube ❁</a></li>
+        <li><a href="https://github.com" target="_blank">Github</a></li>
+        <li><a href="https://facebook.com">Facebook</a></li>
+    </ul>
+</body>
+</html>
