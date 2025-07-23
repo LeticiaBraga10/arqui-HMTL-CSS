@@ -1,0 +1,206 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap');
+
+:root{
+    --cor0:#99AEBE;
+    --cor1:#5C6269;
+    --cor2:#3C7798;
+    --cor3:#0d253f;
+    --cor4:#010F22;
+
+    --fonte-padrão: Arial, Verdana, Sans-Serif;
+    --fonte-destaque: "Vollkorn", serif;
+    --fonte-opcional:"Changa One", sans-serif;
+
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: var(--cor1);
+    font-family: var(--fonte-padrão);
+}
+header{
+    background-image: linear-gradient(to bottom, var(--cor4),var(--cor3));
+    color: white;
+    font-family: var(--fonte-destaque);
+    padding-bottom: 50px;
+    
+}
+header > h1{
+    text-align: center;
+    text-shadow: 4px 3px 7px black;
+    text-emphasis: none;
+    font-size: 3em;
+    padding-top: 40px;
+    font-weight: normal;
+}
+header > p{
+    text-align: justify;
+    text-align: center;
+    font-size: 1em;
+    font-weight: normal;
+}
+nav{
+    background-image: linear-gradient(to bottom, var(--cor4),var(--cor3));
+    padding: 15px;
+    
+}
+nav > a{
+    color: var(--cor0);
+    text-decoration: none;
+    padding: 10px;
+}
+nav > a:hover{
+    background-image: linear-gradient(to bottom,var(--cor0), var(--cor1));
+    color: var(--cor4);
+    border-radius: 20px;
+    
+
+}
+main{
+    background-color: white;
+    font-family: var(--fonte-padrão);
+    padding: 20px;
+    margin: auto;
+    min-width: 200px; /*para se adaptar melhor a dispositivos menores, eu tirei 300px e coloquei 200px*/
+    max-width: 1000px;
+
+}
+
+main > article > h1,h2 {
+    background-image: linear-gradient(65deg, var(--cor2), white);
+    font-size: 1.9em;
+    padding-bottom: 2px;
+    padding-top: 5px;
+    font-family: var(--fonte-opcional);
+    font-family: var(--fonte-destaque);
+    max-height: 400px;
+    margin-bottom: 20px;
+    
+}
+main > article > h1:hover{
+    background-image: linear-gradient(to right, var(--cor3), var(--cor2));
+    transition-duration: 1s;
+    padding: 4px;
+    margin: 2px;
+    border-radius: 20px;
+    margin-left: -10px;
+    color: wheat;
+    text-indent: 40px;
+}
+
+h2:hover{
+    background-image: linear-gradient(to right, var(--cor3), var(--cor2));
+    transition-duration: 1s;
+    padding: 4px;
+    margin: 2px;
+    border-radius: 30px;
+    margin-left: -10px;
+    color: wheat;
+    text-indent: 40px;
+}
+p{
+    text-indent: 20px;
+    text-align: justify;
+    font-size: 1em;
+    margin: 20px 0px 10px 0px;
+    
+}
+/*iframe{
+    width: 60%;
+    margin: auto;
+    display: block;
+    height: 260px;
+    padding: 10px 20px 10px 20px;
+    background-image: linear-gradient(65deg, var(--cor2),var(--cor3));
+    border-radius: 60px;
+    box-shadow: 5px 5px 5px black;
+}*/
+div.video{
+    background-color: #010F22;
+    background-color: var(--cor4);
+    margin: 0px 20px 30px 20px;
+    padding: 20px;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.396);
+
+    position: relative;
+    padding-bottom: 45%;
+    border-radius: 20px;
+}
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+
+}
+main img{
+    width: 100%;
+    
+}
+.passaro{
+    margin: auto;
+    width: 50%;
+    
+}
+.gato{
+    margin: auto;
+    width: 40%;
+}
+.audio{
+    margin: auto;
+    cursor:pointer;
+    width: 100%;
+    box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.397);
+    border-radius: 50px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+aside {
+    background-color: var(--cor0);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 9px rgba(0, 0, 0, 0.374);
+}
+aside > ul {
+    list-style-position: inside;
+    list-style-type: '\00A0\2714\00A0\00A0\00A0';
+}
+aside > h3{
+    background-image: linear-gradient(199deg, var(--cor3),var(--cor2));
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+    color: white;
+    text-align: justify;
+    font-size: 1.5em;
+}
+
+footer{
+    background-image: linear-gradient(var(--cor3));
+    color: aliceblue;
+    padding: 0px 10px 10px 0px;
+    text-align: center;
+}
+footer > p {
+    text-align: center;
+    padding-top: 10px;
+    a{
+        color: aliceblue;
+        text-decoration: none;
+    }
+}
+footer > p>a:hover{
+    color: var(--cor4);
+}
+footer > p>a:active{
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
