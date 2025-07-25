@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento vertical</title>
+    <style>
+        #container{
+            position: relative;
+            height: 92vh;
+            padding: 10px;
+            background-image: url('imagens/target001.png');
+            background-size: 100% 100%;
+            background-color: rgb(245, 141, 5);
+
+        }
+        #conteudo{
+            position: absolute;
+            height: 200px;
+            width: 400px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-image: url('imagens/target001.png');
+            background-color: turquoise;
+
+            left: 50%;
+            top: 50%;
+            /*É necessário usar position: absolute para usar top e letf.
+            OBS: O conteiner sempre é relative e o conteúdo sempre será absoluto.*/
+        
+            transform: translate(-200px, -100px )/*serve para mover algo*/;
+            
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+            
+        </article>
+    </section>
+</body>
+</html>
