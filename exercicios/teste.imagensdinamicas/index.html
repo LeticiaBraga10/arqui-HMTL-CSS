@@ -36,13 +36,16 @@
             margin: auto;
             border-radius: 12px;
         }
+        .foto{
+            background-size: cover;
+        }
     </style>
 </head>
 <body>
     <main><h1>Imagens dinâmicas</h1>
     <h2>Teste de imagem</h2>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis amet adipisci molestiae, fugit impedit iusto tempora totam enim neque ipsa aperiam veniam doloribus illum repellendus perferendis aliquam ad velit minima?</p>
-    <picture>
+    <picture class="foto">
         <source media="(max-width: 700px )" srcset="imagem/menina-p.png" type="image/png">
         <source media="(max-width:1000px )" srcset="imagem/menina-m.png" type="image/png">
         <img src="imagem/menina-g.png" alt="imflexivel">

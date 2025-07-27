@@ -11,17 +11,23 @@
         table{
             width: 400px;
             border-collapse: collapse;
-            
+            height: 300px;
         }
 
         td{
             border: 1px solid black;
+            padding: 9px;
+            text-align: center;/*alinhamento horizontal*/
+            vertical-align: middle;/*alinhamento vertical: top, middle,bottom*/
         }
         .linha2{
             background-color: gray;
         }
         td.dado{
             background-color: greenyellow;
+        }
+        .numero:hover{
+            text-align: right;
         }
     </style>
 </head>
@@ -37,7 +43,7 @@
         <tr class="linha1"> <!--Primeira linha-->
             <td>A1</td>
             <td>B1</td>
-            <td>C1</td>
+            <td class="numero">C1</td>
         </tr>
         <tr class="linha2"><!--Segunda linha-->
             <td>A2</td>
@@ -46,7 +52,7 @@
         </tr>    
         <tr class="linha3"> <!--Terceira linha-->
             <td>A3</td>
-            <td>B3</td>
+            <td class="numero">B3</td>
             <td>C3</td>
         </tr>    
         <tr class="linha4"></tr> <!--Quarta linha-->
