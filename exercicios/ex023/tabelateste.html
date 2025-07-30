@@ -5,49 +5,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
-            margin: 0px;
-            padding: 0px;
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.em;
         }
         table{
-            margin: 40px;
             border: 2px solid black;
             border-collapse: collapse;
-            box-shadow: 14px 5px 10px 0px rgba(0, 0, 0, 0.299);
+            width: 700px;
         }
-        td{
-            border: 2px solid black;
-            width: 200px;
-            height: 60px;
-            vertical-align: middle;
-            text-align: center;
+        caption{
+            font-weight: bolder;
             text-transform: uppercase;
+            background-image: linear-gradient(to right, blue, rgb(231, 220, 220));
+            border-radius: 70px;
+            width: 200px;
+            
+            margin: auto;
+            vertical-align: middle;
+            padding-bottom: 30px;    
         }
-        td:hover{
-            background-color: green;
-        }
-        td:active{
-            background-color: red;
+        th{
+            background-color: rgba(0, 0, 0, 0.915);
             color: white;
         }
+        td{
+            text-overflow: clip;
+        }
+        th,td{
+            border: 2px solid black;
+            padding: 10px;
+        }
+        .cjan{
+            background-color: aqua;
+        }
+        .cdec{
+            background-color: red;
+        }
+        .cnov{
+            background-color: orange;
+        }
+        .cout{
+            background-color: yellow;
+        }
+        .cset{
+            background-color: greenyellow;
+        }
+        .cago{
+            background-color: green;
+        }
+        .cjul{
+            background-color: darkgreen;
+        }
     </style>
-</head>
 <body>
+    <h1>Tabela teste</h1>
     <table>
+        <caption>Tabelinha teste</caption>
+        <colgroup>
+            <col class="cprod"> <!--Linha 0-->
+            <col class="cjan" span="6">  <!--Linha 1-->
+            <!--<col class="cfev">  Linha 2-->
+            <!--<col class="cmar">  Linha 3-->
+            <!--<col class="cabr"> -->
+            <!--<col class="cmai"> -->
+            <!--<col class="cjun">-->
+            <col class="cjul">
+            <col class="cago">
+            <col class="cset">
+            <col class="cout">
+            <col class="cnov">
+            <col class="cdec">  
+        </colgroup>
         <tr>
-            <td>a1</td>
-            <td>b1</td>
-            <td>c1</td>
+            <th>Produtos</th>
+            <th scope="col">jan</th>
+            <th scope="col">fev</th>
+            <th scope="col">mar</th>
+            <th scope="col">abr</th>
+            <th scope="col">mai</th>
+            <th scope="col">jun</th>
+            <th scope="col">jul</th>
+            <th scope="col">ago</th>
+            <th scope="col">set</th>
+            <th scope="col">out</th>
+            <th scope="col">nov</th>
+            <th scope="col">dec</th>
         </tr>
         <tr>
-            <td>a2</td>
-            <td>b2</td>
-            <td>b2</td>
+            <td>TV"40"</td>
+            <td>1</td>	
+            <td>3</td>	
+            <td>7</td>	
+            <td>0</td>	
+            <td>3</td>	
+            <td>12</td>	
+            <td>3</td>	
+            <td>5</td>	
+            <td>14</td>
+            <td>1</td>	
+            <td>7</td>	
+            <td>2</td>
+
+
         </tr>
         <tr>
-            <td>a3</td>
-            <td>b3</td>
-            <td>c3</td>
+            <td>Sansung Galaxy A22</td>
+            <td>1</td>	
+            <td>2</td>	
+            <td>4</td>	
+            <td>3</td>	
+            <td>22</td>	
+            <td>1</td>	
+            <td>0</td>	
+            <td>9</td>	
+            <td>4</td>	
+            <td>5</td>	
+            <td>12</td>	
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Ipad Mini</td>
+            <td>1</td>
+            <td>2</td>	
+            <td>4</td>	
+            <td>3</td>
+            <td>22</td>	
+            <td>1</td>	
+            <td>0</td>	
+            <td>9</td>
+            <td>4</td>	
+            <td>5</td>	
+            <td>12</td>
+            <td>10</td>
+
+        </tr>
+        <tr>
+            <td>Lava louças</td>
+            <td>13</td>	
+            <td>4</td>	
+            <td>6</td>	
+            <td>2</td>
+            <td>1</td>	
+            <td>6</td>	
+            <td>8</td>	
+            <td>15</td>	
+            <td>1</td>	
+            <td>4</td>	
+            <td>7</td>	
+            <td>3</td>
+
+        </tr>
+        <tr>
+            <td>Home teacher</td>
+            <td>7</td>	
+            <td>4</td>	
+            <td>22</td>	
+            <td>1</td>	
+            <td>17</td>	
+            <td>5</td>	
+            <td>8</td>	
+            <td>4</td>	
+            <td>2</td>	
+            <td>1</td>	
+            <td>8</td>	
+            <td>5</td>
+
+        </tr>
+        <tr>
+            <td>Ps4</td>
+            <td>6</td>	
+            <td>3</td>	
+            <td>2</td>	
+            <td>8</td>	
+            <td>9</td>	
+            <td>10</td>
+        	<td>3</td>	
+            <td>13</td>
+            <td>4</td>	
+            <td>7</td>	
+            <td>9</td>	
+            <td>0</td>
+
         </tr>
     </table>
 </body>

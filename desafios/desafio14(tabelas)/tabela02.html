@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 2px solid black;
+            border-collapse: collapse;
+            width: 450px;
+        }
+        th,td{
+            border: 2px solid black;
+            padding: 15px;
+            text-align: center;
+        }
+        .a{
+            background-color: red;
+        }
+        .b{
+            background-color: aqua;
+        }
+        .c{
+            background-color: gray;
+        }
+        .d{
+            background-color: green;
+        }
+        .e{
+            background-color: blue;
+        }
+        .f{
+            background-color: blueviolet;
+        }
+        td:hover{
+            background-color: orangered;
+        }
+        .h{
+            background-color: darkgoldenrod;
+        }
+        .g{
+            background-color: fuchsia;
+        }
+        .i{
+            background-color: black;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Tabela</h1>
+    <table>
+        <caption>Tabelinha especial?</caption>
+        <tr>
+            <td class="a" rowspan="3">a</td>
+            <td class="b" rowspan="3">b</td>
+            <td class="c">c</td>
+            <td class="d">d</td>
+            <td class="e">e</td>
+            <td class="f">f</td>
+        </tr>
+        <tr>
+            <td class="g" colspan="4">g</td>
+            
+        </tr>
+        <tr>
+            <td class="h" colspan="2" rowspan="2">h</td>
+            <td class="i" rowspan="2">i</td>
+            <td>j</td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2">L</td>
+            <td>k</td>
+        </tr>
+        <tr>
+            <td colspan="3">m</td>
+            <td>n</td>
+        </tr>
+    </table>
+</body>
+</html>
