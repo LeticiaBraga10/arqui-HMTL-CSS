@@ -4,31 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        fieldset{
-            background-color: rgb(46, 123, 123);
-            color: rgb(0, 0, 0);
-            
-        }
-        label:hover{
-            background-color: brown;
-            transition-duration: 1.2s;
-            border-radius: 40px;
-            padding-right: 20px;
-        }
-    </style>
 </head>
 <body>
     <h1>formulário</h1>
     <form action="cadastro.js" autocomplete="on" method="get">
-        <fieldset>
-            <legend>Dados pessoais</legend>
+        <fieldset >
+            <legend>Sexo:</legend>
             <p>
-                <label for="inome">Nome:</label>
-                <input type="text" name="nome" id="inome">
+                <input type="radio" name="sexo" id="ifem" required><label for="ifem">Feminino</label> <br> <br>
+
+                <input type="radio" name="sexo" id="imasc" required><label for="imasc">Masculino</label>
             </p>
-            <p></p>
         </fieldset>
+        <fieldset>
+            <legend>Esportes favoritos</legend>
+            <p>
+                <input type="checkbox" name="fut" id="ifut"><label for="ifut">Futebol</label> <br>
+                <input type="checkbox" name="basq" id="ibasq"><label for="ibasq">Basquete</label> <br>
+                <input type="checkbox" name="nat" id="inat"><label for="inat">Natação</label> <br>
+                <input type="checkbox" name="surf" id="isurf" checked><label for="isurf" >Surf</label> <br>
+            </p>
+        </fieldset>
+         <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
     </form>
 </body>
 </html>

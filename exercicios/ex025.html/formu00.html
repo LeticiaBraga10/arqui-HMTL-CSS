@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Testando, vamos ver se aprendi formulários mesmo. kakakak</h1>
+    <form action="cadastro.js" method="get" autocomplete="on">
+        <fieldset>
+          <p>
+            <label for="inome">Nome</label>
+            <input type="text" name="nome" id="inome" placeholder="Nome completo." required>
+        </p>  
+        <p>
+            <fieldset>
+                <legend>sexo:</legend>
+                <p>
+                    <input type="radio" name="sexo" id="ifem"><label for="ifem">Feminino</label> <br> <br>
+                    <input type="radio" name="sexo" id="imasc"><label for="imasc">Masculino</label>
+                </p>
+            </fieldset>
+        </p>
+        <p>
+            <fieldset>
+                <legend>Informações adicionais:</legend>
+                <label for="iprof">Profissão</label>
+                <input type="text" name="prof" id="iprof" list="lstprof">
+                <datalist id="lstprof">
+                    <option value="Advogado">ADV</option>
+                    <option value="Arquiteto">ARQ</option>
+                    <option value="Professor">PROF</option>
+                    <option value="Desenvolvedor">DEV</option>
+                    <option value="Design Gráfico">DG</option>
+                    <option value="Administrador">ADM</option>
+                    <option value="Médico">MED</option>
+                    <option value="Engenheiro">ENG</option>
+                    <option value="Policial">POL</option>
+                    <option value="Mecânico">MEC</option>
+                    <option value="Enfermeiro">ENF</option>
+                </datalist>
+                <p>
+                    <label for="cid">Cidade:</label>
+                    <select name="cid" id="icid">
+                        <option value="" checked>---Esolha</option>
+                        <optgroup label="Capitais">
+                            <option value="BA">SALVADOR-BA</option>
+                            <option value="RJ">RIO DE JANEIRO-RJ</option>
+                            <option value="SP">SÃO PAULO-SP</option>
+                            <option value="MG">BELO HORIZONTE-MG</option>
+                            <option value="BL">BELÉM-PA</option>
+                        </optgroup>
+                        <optgroup label="Interiores">
+                            <option value="SP">Santos-SP</option>
+                            <option value="BA">Alagoinhas-BA</option>
+                            <option value="BA">Santo Amaro-BA</option>
+                            <option value="PE">Petrolina-PE</option>
+                        </optgroup>
+                    </select>
+                </p>
+            </fieldset>
+        </p>
+        </fieldset>
+        <P style="color: red; text-align: center ;">
+            Confira os seus dados, e garanta que preencheu tudo corretamente.
+        </P>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
