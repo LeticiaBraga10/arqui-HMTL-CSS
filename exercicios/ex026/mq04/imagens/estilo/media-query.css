@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+/*Todas as demais midias*/
+
+@media print /*impressora*/{
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body{
+        background-image: url(../back-print.jpg); /*desnecessário*/
+        
+    }
+    main::after /*Serve para adicionar mensagens*/{
+        content: 'Essa impressão foi feita por mim, Leticia Braga';
+        text-decoration: overline;
+    }
+    main h1{
+        text-shadow: none;
+        color: black;
+    }
+    main{
+        border: 2px solid black;
+    }
+    
+    img#tablet{display: none;}   
+    img#fone{display: none;}
+    img#print{display: block;}
+    img#tv{display: none;}
+    img#pc{display: none;}
+}
+
+
+@media screen and (min-width:768px) and (max-width: 992px) /*Tablet*/{
+    body{
+        background-image: url(../back-tablet.jpg);
+    
+    }
+    img#tablet{display: block;}   
+    img#fone{display: none;}
+    img#print{display: none;}
+    img#tv{display: none;}
+    img#pc{display: none;}
+}
+
+@media screen and (min-width: 992px) and (max-width:1200px) /*desktop*/{
+    body{
+        background-image: url(../back-pc.jpg);
+    }
+    img#fone{display: none;}
+    img#tablet{display: none;}
+    img#print{display: none;}
+    img#tv{display: none;}
+    img#pc{display: block;}
+}
+
+@media screen and (min-width:1200px)/*tv*/{
+    body{
+        background-image: url(../back-tv.jpg);
+    }
+    main{
+        width: 700px;
+    }
+    img#fone{display: none;}
+    img#tablet{display: none;}
+    img#print{display: none;}
+    img#pc{display: none;}
+    img#tv{display: block;}
+
+}
