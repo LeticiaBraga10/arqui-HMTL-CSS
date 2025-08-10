@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de login </title>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=VT323&display=swap');
+    </style>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <main>
+    <section id="login">
+        <div id="imagem">
+            <!--Foto-->
+        </div>
+        <div id="formulario">
+            <h1>Login</h1>
+            <p>Seja bem-vindo(a) ao menu de acesso. Faça login para acessar as ferramentas disponíveis na plataforma.</p>
+            <form action="login.js" autocomplete="on">
+
+                <div class="campo">
+
+                    <span class="material-icons">person</span>
+                    
+                    <input type="email" name="email" id="iemail" required maxlength="18" placeholder="Seum email">
+                    <label for="iemail">Email</label>
+                </div>
+                <div class="campo">
+
+                    <span class="material-icons">lock</span>
+                    <input type="password" name="senha" id="isenha" required minlength="8" maxlength="15">
+                    <label for="isenha">Senha</label>
+                </div>
+                <input type="submit" value="Enviar">
+                <a href="#" class="botao">Esquecei a senha</a>
+            </form>
+        </div>
+    </section>       
+    </main>
+</body>
+</html>

@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+/*mobile first*/
+
+:root{
+    --fonte-exp:"Cinzel", serif;
+    --cor1:#62f7e8;
+    --cor2:#14c2c2;
+    --cor3:#0396A6;
+    --cor4:#03658C;
+    --cor5:#02335e;
+}
+
+*{
+    margin: 0px;
+    padding: 0px; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--cor5);
+    box-sizing: border-box;
+}
+
+main{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+section#login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+
+    background-color: white;
+    width: 390px;
+    height: 530px;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.552);
+    border-radius: 10px;
+
+    transition: width .3s, height .3s;
+    transition-timing-function: ease;
+    transform: translate(-50%, -50%);
+}
+
+section#login > div#imagem{
+    display: block;
+    background-image: url(../imagens/pexels-julieaagaard-1426718.jpg);
+    height: 200px;
+    width: 390px;
+    background-size: cover;
+    background-position: center;
+}
+section#login > div#formulario{
+    display: block;
+    padding: 20px;
+    
+}
+div#formulario> h1{
+    text-align: center;
+    font-family: var(--fonte-exp);
+    font-size: 2em;
+}
+div#formulario > p {
+    text-align: justify;
+    font-size: 1em;
+}
+
+form > div.campo{
+    background-color: var(--cor4);
+    border-radius: 9px;
+    padding-bottom: 10px;
+    
+}
+
+div.campo{
+    display: flex;
+    align-items: center;
+}
+
+div.campo > label{
+    display: none;
+}
+
+div.campo > span{
+    background-color: rgba(0, 0, 0, 0.973);
+    color: white;
+    width: 30px;
+    padding: 5px;
+    position: absolute;
+    margin-left: 0px;
+    
+}
+
+div.campo > input{
+    background-color: var(--cor1);
+    width:calc(100% - 42px) ;
+    height: 100%;
+    border: 0px;
+    border-radius: 5px;
+    padding: 8px;
+    margin-left: 10%;
+    
+    /* margin-left: 44px;
+    margin-top: -44px;
+    flex: 1;
+    margin: 0px;  */
+
+}
+div.campo > input:focus-within{
+    background-color: rgba(255, 255, 255, 0.848);
+}
+
+form > input[type=submit]{
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--cor3);
+    cursor: pointer;
+}
+
+form > input[type=submit]:hover{
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.514);
+}
+
+form > input[type=submit]:active{
+    background-color: var(--cor4);
+}
+
+form > a.botao{
+    display: block;
+    text-align: center;
+    font-size: 1.1em;
+    height: 30px;
+    width: 100%;
+    margin-top: 5px;
+    padding-top:7px;
+    border: 2px solid var(--cor1);
+    border-radius: 10px;
+    background-color: var(--cor1);
+}
