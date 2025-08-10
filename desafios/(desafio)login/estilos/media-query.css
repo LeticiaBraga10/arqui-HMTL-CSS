@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 768px) and (max-width:992px) {
+    body{
+        background-image: linear-gradient(to top, var(--cor5), var(--cor1));
+
+    }
+    section#login{
+        width: 80%;
+        height: 520px;
+        
+        
+    }
+    
+    #formulario > p{
+        padding-bottom: 20px;
+        font-size: 1.3em;
+
+    }
+    section#login > div#imagem{
+        float: left;
+        height: 100%;
+        width: 30%;
+        background-size: cover;
+        background-position: center;
+    }
+    section#login > div#formulario{
+        float: right;
+        height: 100%;
+        width: 70%;
+        padding-top: 18%;
+    }
+    div#formulario > h1{
+        font-size: 2.5em;
+        font-weight: bolder;
+    }
+    form> div.campo{
+    width: 90%;
+    margin-bottom: 20px;
+    
+    }
+    form > a.botao{
+    margin-left: 18px;
+
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    body{
+        background-image: linear-gradient(to top, var(--cor5), var(--cor1));
+
+    }
+    section#login{
+        width: 80%;
+        height: 520px;
+        
+    }
+    #formulario > h1{
+        padding-top: 20px;
+    }
+    #formulario > p{
+        padding-bottom: 20px;
+        font-size: 1.3em;
+
+    }
+    section#login > div#imagem{
+        float: left;
+        height: 100%;
+        width: 50%;
+        background-size: cover;
+        background-position: center;
+    }
+    section#login > div#formulario{
+        float: right;
+        height: 100%;
+        width: 50%;
+        margin: auto;
+        padding-top: 8%;
+    }
+    div#formulario > h1{
+        font-size: 2.5em;
+        font-weight: bolder;
+    }
+    form> div.campo{
+    width: 89%;
+    margin-bottom: 20px;
+    
+    
+    }
+    form > div.campo > input{
+    width: 94%; 
+
+    }
+    form > a.botao{
+    margin-left: 18px;
+
+    }
+}

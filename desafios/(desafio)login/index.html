@@ -9,42 +9,40 @@
     </style>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
 <body>
     <main>
-    <section id="login">
-        <div id="imagem">
-            <!--Foto-->
-        </div>
-        <div id="formulario">
-            <h1>Login</h1>
-            <p>Seja bem-vindo(a) ao menu de acesso. Faça login para acessar as ferramentas disponíveis na plataforma.</p>
-            <form action="login.js" autocomplete="on">
+       <section id="login">
+            <div id="imagem">
+                <!--Foto (vai ser adicionada no css)-->
+            </div>
 
-                <div class="campo">
+            <div id="formulario">
+                <h1>Login</h1>
+                <p>Seja bem-vindo(a). Faça login para acessar a sua conta.</p>
 
-                    <span class="material-icons">person</span>
+                <form action="login.js" method="post">
                     
-                    <input type="email" name="email" id="iemail" required maxlength="18" placeholder="Seum email">
-                    <label for="iemail">Email</label>
-                </div>
-                <div class="campo">
+                    <div class="campo">
+                        <span class="material-icons">person</span>
+                        <input type="email" name="login" id="ilogin" required placeholder="  Seu email.." maxlength="30">   
+                        <label for="ilogin">Login</label> 
+                    </div>
 
-                    <span class="material-icons">lock</span>
-                    <input type="password" name="senha" id="isenha" required minlength="8" maxlength="15">
-                    <label for="isenha">Senha</label>
-                </div>
-                <input type="submit" value="Enviar">
-                
-                <a href="#" class="botao">Esquecei a senha
-                    <span
-                class="material-icons">email</span>
-            </a>
-            </form>
-        </div>
-    </section>       
+                    <div class="campo">
+                        <span class="material-icons">lock</span>
+                        <input type="password" name="senha" id="isenha" required placeholder="  Sua senha.." minlength="8" maxlength="15">
+                        <label for="isenha">Senha</label>
+                    </div>
+
+                    <input type="submit" value="Enviar">
+                    <a href="#" class="botao">Esqueci a senha <span class="material-icons">email</span></a>
+                    
+                </form>
+            </div>
+       </section>
     </main>
 </body>
 </html>
