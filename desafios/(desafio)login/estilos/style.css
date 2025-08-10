@@ -22,12 +22,15 @@ body, html {
     height: 100vh;
     background-color: var(--cor5);
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 main{
     position: relative;
     height: 100vh;
     width: 100vw;
+    
+    
     
 }
 
@@ -75,10 +78,13 @@ form > div.campo{
     background-color: var(--cor4);
     border-radius: 9px;
     padding-bottom: 10px;
+    display: block;
+
     
 }
 
 div.campo{
+    position: relative;
     display: flex;
     align-items: center;
 }
@@ -88,7 +94,7 @@ div.campo > label{
 }
 
 div.campo > span{
-    background-color: rgba(0, 0, 0, 0.973);
+    background-color: rgba(0, 0, 0, 0);
     color: white;
     width: 30px;
     padding: 5px;
@@ -99,19 +105,24 @@ div.campo > span{
 
 div.campo > input{
     background-color: var(--cor1);
-    width:calc(100% - 42px) ;
+    width:calc(98% - 42px) ;
     height: 100%;
     border: 0px;
     border-radius: 5px;
     padding: 8px;
     margin-left: 10%;
+    transform: translate(-2px, 4px);
     
-    /* margin-left: 44px;
-    margin-top: -44px;
-    flex: 1;
-    margin: 0px;  */
+    
 
 }
+
+div.campo{position: relative;
+    display: flex;
+    align-items: center;
+    
+}
+
 div.campo > input:focus-within{
     background-color: rgba(255, 255, 255, 0.848);
 }
@@ -144,7 +155,28 @@ form > a.botao{
     width: 100%;
     margin-top: 5px;
     padding-top:7px;
-    border: 2px solid var(--cor1);
+    border: 2px solid var(--cor2);
     border-radius: 10px;
-    background-color: var(--cor1);
+    background-color: var(--cor2);
+    color: #02335e;
+    text-decoration: none;
 }
+
+form > a.botao:active{
+    background-color: var(--cor4);
+    border: 2px solid var(--cor4);
+    color: blue;
+    span{
+        color: blue;
+    }
+}
+
+form > a.botao > span{
+    color: rgb(7, 7, 7);
+    font-size: 1em;
+    
+    
+
+}
+
+
